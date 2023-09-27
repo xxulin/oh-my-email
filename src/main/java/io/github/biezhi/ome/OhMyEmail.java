@@ -41,6 +41,27 @@ public class OhMyEmail {
     }
 
     /**
+     * smtp gmail
+     *
+     * @return
+     */
+    public static Properties SMTP_GMAIL() {
+        return SMTP_GMAIL(false);
+    }
+
+    /**
+     * smtp gmail
+     *
+     * @param debug
+     * @return
+     */
+    public static Properties SMTP_GMAIL(boolean debug) {
+        Properties props = defaultConfig(debug);
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        return props;
+    }
+
+    /**
      * smtp entnterprise qq
      *
      * @param debug
